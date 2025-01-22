@@ -1,0 +1,92 @@
+.section-hero {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+
+  text-align: center;
+
+  background-color: #2f303a;
+  background-image: url(../images/img-hiro.jpg),
+    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+}
+
+.section-hero__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+.section-hero__button {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  overflow: hidden;
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0px;
+
+  color: #ffffff;
+  background-color: #2196f3;
+  transition: background-color 250ms $cubik-linear, color 250ms $cubik-linear;
+
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+    background-color: $white-text-color;
+  }
+
+  &::after {
+    background-image: url(../images/finger.png);
+    background-size: contain;
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    transition: transform 250ms $cubik-linear;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(-35px);
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(calc(-50% + 35px));
+    transition: transform 250ms $cubik-linear;
+
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/galockka.png);
+    background-size: contain;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: translateY(-50%);
+  }
+}

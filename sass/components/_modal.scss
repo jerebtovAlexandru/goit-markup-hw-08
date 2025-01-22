@@ -1,0 +1,32 @@
+.backdrop--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  width: 528px;
+  height: 581px;
+  background-color: $white-text-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.modal__button {
+  position: absolute;
+  margin-right: 15px;
+  margin-top: 15px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $accent-color;
+  background-image: url(../images/krestik.png);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

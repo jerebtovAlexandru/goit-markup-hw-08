@@ -1,0 +1,121 @@
+.essembly-elements {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address-element{
+  width: 231px;
+  margin-right: 70px;
+}
+
+.address-element__street {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $white-text-color;
+  font-style: normal;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 9px;
+  transition: color 250ms $cubik-linear;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address-element__link {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color 250ms $cubik-linear;
+
+  &:hover,
+  &:focus {
+  color: $accent-color;
+  }
+}
+
+.address-element__item--bottom {
+  margin-bottom: 9px;
+}
+
+/* Оформление "Присоединяйся" */
+
+.accession {
+  width: 206px;
+}
+
+.accession__title {
+  color: $white-text-color;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* ОФОРМЛЕНИЕ ПОДПИСКИ НА РАССЫЛКУ */
+
+.subscribe-element {
+  margin: 0;
+  padding: 0;
+  margin-left: 93px;
+}
+
+.subscribe-element__title {
+  color: $white-text-color;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subscribe-element__input {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgba(33, 150, 243, 0);
+  height: 50px;
+  width: 358px;
+  padding-left: 16px;
+  color: $white-text-color;
+}
+
+.subscribe-element__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+  color: $white-text-color;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(33, 150, 243);
+}
+.subscribe-element__button {
+  fill: $white-text-color;
+  margin-left: 10px;
+}
+
+.subscribe-element__line {
+  display: flex;
+}
