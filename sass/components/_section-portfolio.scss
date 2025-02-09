@@ -1,18 +1,9 @@
-.section-portfolio {
-  margin-bottom: 97px;
-  margin-top: 50px;
-}
 
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
 
 .card-list__item {
   transition: box-shadow 250ms $cubik-linear;
-  margin-right: 30px;
-  margin-bottom: 30px;
+
 
   &:hover,
   &:focus {
@@ -20,12 +11,6 @@
       0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
   }
 
-  &:nth-child(3n){
-      margin-right: 0px;
-  }
-  &:nth-last-child(-n + 3){
-      margin-bottom: 0px;
-  }
 }
 
 .card-name {
@@ -36,18 +21,14 @@
   line-height: 2;
   letter-spacing: 0.06em;
   margin: 0;
-  margin-bottom: 4px;
-  margin-top: 20px;
-  margin-left: 24px;
+
 }
 
 .card-name__subtitle {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.87;
-  margin: 0;
-  margin-bottom: 20px;
-  margin-left: 24px;
+
 
   color: $secondary-text-color;
 }
@@ -63,7 +44,7 @@
 }
 
 .card-list__image {
-  position: relative;
+position: relative;
   box-shadow: none;
   overflow: hidden;
   line-height: 0;
@@ -76,7 +57,7 @@
 }
 
 .overlay {
-  position: absolute;
+position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -88,7 +69,7 @@
 
   padding-left: 24px;
   padding-top: 63px;
-  margin-bottom: 0;
+
   font-size: 18px;
   line-height: 28px;
   color: $white-text-color;

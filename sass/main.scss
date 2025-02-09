@@ -1,17 +1,56 @@
+
+// Совместные подключение 
+
 @import "./components/common";
+@import "./components/design-icon";
 @import "./utils/reset";
 @import "./utils/variables";
-@import "./components/logo";
-@import "./components/design-icon";
-@import "./components/form";
-@import "./components/modal";
-@import "./components/page-footer";
-@import "./components/page-header";
-@import "./components/section-company";
-@import "./components/section-hero";
-@import "./components/section-team";
-@import "./components/section-warning";
-@import "./components/section-work";
-
-@import "./components/section-button-pr";
 @import "./components/section-portfolio";
+
+// Для мобильной вёрстки
+
+@import "./components/mobile/logo";
+@import "./components/mobile/form";
+@import "./components/mobile/modal";
+@import "./components/mobile/page-footer";
+@import "./components/mobile/page-header";
+@import "./components/mobile/section-company";
+@import "./components/mobile/section-hero";
+@import "./components/mobile/section-team";
+@import "./components/mobile/section-warning";
+@import "./componentsmobile/section-work";
+
+@import "./components/mobile/section-button-pr";
+@import "./components/mobile/section-portfolio";
+
+// Для  вёрстки планшета
+
+@import "./components/table/logo";
+@import "./components/table/form";
+@import "./components/table/modal";
+@import "./components/table/page-footer";
+@import "./components/table/page-header";
+@import "./components/table/section-company";
+@import "./components/table/section-hero";
+@import "./components/table/section-team";
+@import "./components/table/section-warning";
+@import "./componentstable/section-work";
+
+@import "./components/table/section-button-pr";
+@import "./components/table/section-portfolio";
+
+// Для вёрстки компьютера 
+
+@import "./components/computer/logo";
+@import "./components/computer/form";
+@import "./components/computer/modal";
+@import "./components/computer/page-footer";
+@import "./components/computer/page-header";
+@import "./components/computer/section-company";
+@import "./components/computer/section-hero";
+@import "./components/computer/section-team";
+@import "./components/computer/section-warning";
+@import "./componentscomputer/section-work";
+
+@import "./components/computer/section-button-pr";
+@import "./components/computer/section-portfolio";

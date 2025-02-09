@@ -1,0 +1,43 @@
+.menu-button{
+fill: $accent-color;
+background-color: $white-text-color;
+z-index:2;
+right: 15px;
+top: 15px;
+
+&.is-open{
+position: fixed;
+}
+}
+
+.menu-container{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+padding: 48px 40px;
+  background-color:$white-text-color;
+  color:$primary-text-color;
+
+  transition: color 250ms $cubik-linear;
+
+&.is-open{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+}
+
+.menu-button .icon-cross{
+  display: none;
+}
+
+.menu-button.is-open .icon-cross{
+  display: block;
+
+}
+.menu-button.is-open .icon-menu{
+  display: none;
+}

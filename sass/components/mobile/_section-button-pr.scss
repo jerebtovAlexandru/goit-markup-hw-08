@@ -1,21 +1,17 @@
 .section-button {
   align-items: center;
-  margin-top: 91px;
+margin-bottom:40px ;
 }
 
 .section-button__list {
-  display: flex;
-  justify-content: center;
-  height: 38px;
-}
-
-.section-button__item {
-  margin-right: 8px;
-  margin-bottom: 16px;
+display: flex;
+flex-wrap: wrap;
+row-gap:15px;
+column-gap: 8px;
 }
 
 .section-button__button {
-  padding: 6px 25px;
+  padding: 6px 24px ;
   border: 0;
   border-radius: 4px;
 

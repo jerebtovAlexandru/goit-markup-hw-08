@@ -1,29 +1,29 @@
-.essembly-elements {
-  display: flex;
-  align-items: baseline;
-}
+
 
 .page-footer {
-  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
+
+  background-color: #2f303a;
+
 }
 
-.address-element{
-  width: 231px;
-  margin-right: 70px;
+.footer-address{
+  margin-top: 20px;
+  margin-bottom:60px ;
 }
+
+
 
 .address-element__street {
-  display: inline-block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $white-text-color;
   font-style: normal;
   text-decoration: none;
-  margin-top: 20px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   transition: color 250ms $cubik-linear;
 
   &:hover,
@@ -47,16 +47,19 @@
 }
 
 .address-element__item--bottom {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 /* Оформление "Присоединяйся" */
 
 .accession {
-  width: 206px;
+margin-left: auto;
+margin-right: auto;
+
 }
 
 .accession__title {
+  
   color: $white-text-color;
   font-size: 14px;
   font-weight: 700;
@@ -71,7 +74,7 @@
 .subscribe-element {
   margin: 0;
   padding: 0;
-  margin-left: 93px;
+  margin-top: 60px;
 }
 
 .subscribe-element__title {
@@ -89,8 +92,9 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: rgba(33, 150, 243, 0);
   height: 50px;
-  width: 358px;
+  width: 450px;
   padding-left: 16px;
+  margin-bottom: 20px;
   color: $white-text-color;
 }
 
@@ -98,11 +102,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+margin-left: auto;
+margin-right: auto;
   padding: 0;
   width: 200px;
   height: 50px;
-  margin-left: 12px;
+  // margin-left: 12px;
   border-radius: 4px;
   border: none;
 
@@ -113,9 +118,6 @@
 }
 .subscribe-element__button {
   fill: $white-text-color;
-  margin-left: 10px;
-}
 
-.subscribe-element__line {
-  display: flex;
+
 }

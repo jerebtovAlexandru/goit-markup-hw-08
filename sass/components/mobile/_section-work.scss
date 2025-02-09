@@ -1,33 +1,26 @@
 .section-work {
-  margin-bottom: 94px;
-  margin-top: 94px;
+
+  @media screen and ( max-width:1199px){
+    display: none;
+  }
+
 }
 
-.list-work {
-  display: flex;
-  justify-content: space-between;
-}
+
 .list-work__img {
   display: block;
 }
 
 .section-work__title {
-  margin-bottom: 50px;
-  margin-top: 0px;
+
 
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   text-align: center;
 }
-.list-work__item {
-  position: relative;
-}
+
 .work-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   bottom: 0;
   content: "";
 
