@@ -1,16 +1,28 @@
 .menu-button{
 fill: $accent-color;
 background-color: $white-text-color;
-z-index:2;
 right: 15px;
 top: 15px;
 
 &.is-open{
 position: fixed;
+z-index: 2;
 }
+
+@media screen and (min-width:768px) {
+display: none;
+  }
 }
 
 .menu-container{
+display:flex;
+align-items: center;
+justify-content: space-between;
+height: 100%;
+position: relative;
+
+@media screen and (max-width:767px) {
+z-index: 1;
 display: none;
 position: fixed;
 top: 0;
@@ -23,11 +35,17 @@ padding: 48px 40px;
 
   transition: color 250ms $cubik-linear;
 
-&.is-open{
+
+  &.is-open{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: start;
+    
 }
+  }
+
+
 }
 
 .menu-button .icon-cross{

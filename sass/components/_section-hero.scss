@@ -17,7 +17,6 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  // width: 696px;
   text-transform: uppercase;
 
   color: #ffffff;
@@ -26,10 +25,20 @@
   font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  max-width:360px;
+
+@media screen and (min-width:1200px){
+max-width:696px;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
 }
 .section-hero__button {
-  // position: relative;
-  // display: flex;
+  position: relative;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -61,7 +70,7 @@
     content: "";
     width: 20px;
     height: 20px;
-    // margin-left: 5px;
+    margin-left: 5px;
     transition: transform 250ms $cubik-linear;
   }
 
@@ -71,7 +80,7 @@
   }
 
   &::before {
-    // position: absolute;
+    position: absolute;
     top: 50%;
     right: 32px;
     transform: translateY(calc(-50% + 35px));

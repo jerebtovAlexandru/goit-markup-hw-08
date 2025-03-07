@@ -12,6 +12,10 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+
+   @media(min-width:1200px) {
+    padding-top: 80px;
+  }
 }
 
 .container {
@@ -19,17 +23,14 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  @media(min-width: 480px) {
-  width: 480px;
-  }
+  max-width: 480px;
 
     @media(min-width: 768px) {
-  width: 768px;
+  max-width: 768px;
   }
 
     @media(min-width: 1200px) {
-  width: 1200zpx;
+  max-width: 1200px;
   }
 }
 

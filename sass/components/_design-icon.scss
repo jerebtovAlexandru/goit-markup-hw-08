@@ -2,9 +2,10 @@
   display: flex;
   padding: 0px;
   justify-content: space-between;
-  width: 206px;
+  max-width: 206px;
   margin-right: auto;
   margin-left: auto;
+    gap: 10px;
 }
 
 .social-list__icon {

@@ -1,9 +1,13 @@
 .form {
-  width: 448px;
+width: 370px;
   margin-left: auto;
   margin-right: auto;
 
   margin-top: 40px;
+
+  @media screen and (min-width:1200px){
+    width: 448px;
+  }
 }
 
 .form__title {
@@ -17,7 +21,7 @@
 }
 
 .form__field {
-  // display: flex;
+  display: flex;
   position: relative;
   flex-direction: column;
   margin-bottom: 10px;
@@ -82,9 +86,9 @@
 }
 
 .checkbox {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -135,13 +139,13 @@
   color: $accent-color;
 }
 .form__button {
-  width: 200p;
+  width: 200px;
   height: 50px;
   padding-left: 52px;
   padding-right: 52px;
   margin-left: auto;
   margin-right: auto;
-  // display: block;
+  display: block;
   background-color: rgba(33, 150, 243, 1);
   transition: background-color 250ms $cubik-linear;
 

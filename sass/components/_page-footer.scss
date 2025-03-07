@@ -1,20 +1,41 @@
-
-
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
 
   background-color: #2f303a;
-
 }
 
-.footer-address{
+.essembly-elements {
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer-address {
   margin-top: 20px;
-  margin-bottom:60px ;
+  margin-bottom: 60px;
 }
 
+.address-element {
 
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    text-align: left;
+  }
+}
 
 .address-element__street {
   font-size: 14px;
@@ -42,7 +63,7 @@
 
   &:hover,
   &:focus {
-  color: $accent-color;
+    color: $accent-color;
   }
 }
 
@@ -51,15 +72,13 @@
 }
 
 /* Оформление "Присоединяйся" */
-
-.accession {
-margin-left: auto;
-margin-right: auto;
-
+.accession{
+  @media screen and (min-width:1200px) {
+text-align: left;
+  }
 }
 
 .accession__title {
-  
   color: $white-text-color;
   font-size: 14px;
   font-weight: 700;
@@ -75,15 +94,27 @@ margin-right: auto;
   margin: 0;
   padding: 0;
   margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .subscribe-element__title {
   color: $white-text-color;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 3%;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .subscribe-element__input {
@@ -92,32 +123,62 @@ margin-right: auto;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: rgba(33, 150, 243, 0);
   height: 50px;
-  width: 450px;
+  width: 100%;
   padding-left: 16px;
-  margin-bottom: 20px;
   color: $white-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    width: 358px;
+  }
 }
 
 .subscribe-element__button {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-margin-left: auto;
-margin-right: auto;
   padding: 0;
   width: 200px;
   height: 50px;
-  // margin-left: 12px;
   border-radius: 4px;
   border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 
   cursor: pointer;
   color: $white-text-color;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: rgb(33, 150, 243);
+
+@media screen and (max-width: 1199px) {
+margin-top: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+margin-left: 12px;
+  }
 }
-.subscribe-element__button {
+.subscribe-element__icon {
+  margin-left: 10px;
   fill: $white-text-color;
+}
 
+.subscribe-element__line {
+display: flex;
+flex-direction: column;
+align-items: center;
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+flex-direction: row;
+  }
 }
