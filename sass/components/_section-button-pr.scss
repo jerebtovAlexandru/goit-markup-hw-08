@@ -1,14 +1,14 @@
 .section-button {
+  margin-bottom:40px ;
+  margin-top: 60px;
+
   align-items: center;
-margin-bottom:40px ;
-margin-top: 60px;
-
-
 }
 
 .section-button__list {
 display: flex;
 flex-wrap: wrap;
+
 row-gap:15px;
 column-gap: 8px;
 
@@ -20,17 +20,17 @@ column-gap: 8px;
 
 .section-button__button {
   padding: 6px 24px ;
+
   border: 0;
   border-radius: 4px;
-
   background-color: $grey-button-color;
+  box-shadow: none;
+
+  @include text(16px,500,1.62,0.02em);
   color: $primary-text-color;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.62;
+
   transition: color 250ms $cubik-linear, background-color 250ms $cubik-linear,
     box-shadow 250ms $cubik-linear;
-  box-shadow: none;
 
   &:hover,
   &:focus {
@@ -40,3 +40,4 @@ column-gap: 8px;
       0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   }
 }
+

@@ -1,8 +1,8 @@
 .form {
-width: 370px;
+  width: 370px;
+
   margin-left: auto;
   margin-right: auto;
-
   margin-top: 40px;
 
   @media screen and (min-width:1200px){
@@ -11,20 +11,19 @@ width: 370px;
 }
 
 .form__title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin: 0;
   margin-bottom: 12px;
+
+  @include text(20px,700,1.15,0.03em);
+  text-align: center;
 }
 
 .form__field {
   display: flex;
-  position: relative;
   flex-direction: column;
+  position: relative;
+
   margin-bottom: 10px;
+
   transition: fill 250ms $cubik-linear;
 
   &:focus-within {
@@ -42,8 +41,10 @@ width: 370px;
   height: 40px;
   padding: 0;
   padding-left: 43px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
   transition: border 250ms $cubik-linear;
 
   &:focus,
@@ -62,13 +63,15 @@ width: 370px;
 
 .form__coment {
   height: 120px;
-  resize: none;
+
   padding: 12px 16px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 1%;
+
+  @include text(12px,400,1.16,1%);
+  resize: none;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
   transition: border 250ms $cubik-linear;
 
   &:hover,
@@ -77,11 +80,9 @@ width: 370px;
   }
 
   &::placeholder {
+    @include text(12px,400,1.16,1%);
+
     color: rgba(117, 117, 117, 0.5);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.16;
-    letter-spacing: 1%;
   }
 }
 
@@ -89,6 +90,7 @@ width: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -104,61 +106,58 @@ width: 370px;
 }
 
 .checkbox__mark {
-  margin-right: 8px;
   width: 16px;
   height: 15px;
+  margin-right: 8px;
+
   border-radius: 4px;
   border: 2px solid black;
+
   transition: background-color 250ms $cubik-linear,
-    background-origin 250ms $cubik-linear, border 250ms $cubik-linear;
+  background-origin 250ms $cubik-linear, border 250ms $cubik-linear;
 }
 
 .checkbox__input:checked + .checkbox__mark {
-  background-color: $accent-color;
   border: $accent-color;
+  background-color: $accent-color;
   background-origin: border-box;
   background-image: url(../images/icon_check.svg);
 }
 
 .checkbox__policy {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 3%;
+  @include text(14px,400,1.71,3%);
   color: $secondary-text-color;
 }
 
 .form__text {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: $secondary-text-color;
   margin-bottom: 4px;
+
+  @include text(12px,400,1.16,0.01em);
+  color: $secondary-text-color;
+
 }
 .checkbox__link {
   color: $accent-color;
 }
 .form__button {
+  display: block;
+
   width: 200px;
   height: 50px;
   padding-left: 52px;
   padding-right: 52px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  background-color: rgba(33, 150, 243, 1);
-  transition: background-color 250ms $cubik-linear;
-
-  color: rgba(255, 255, 255, 1);
 
   border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
+  background-color: rgba(33, 150, 243, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  @include text(16px,700 ,1.87,0.06em);
+  color: rgba(255, 255, 255, 1);
+
+  transition: background-color 250ms $cubik-linear;
 
   &:hover,
   &:focus {
