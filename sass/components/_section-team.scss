@@ -77,14 +77,16 @@ height: 428px;
 
 .team-list__img {
   display: block;
-width: 100%;
+width:100%;
 height:auto;
 
 
   @media screen and (min-width: 768px) {
-    width: 354px;
+width: 354px;
+height:374px;
   }
   @media screen and (min-width:1200px) {
 width: 270px;
+height: 260px;
   }
 }
