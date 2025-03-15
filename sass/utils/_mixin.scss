@@ -1,6 +1,5 @@
 
 // микс для свойств displey:flex
-// По умолчанию - @include flex(flex,flex-start,stretch,nowrap,row);
 
 @mixin flex{
     display:flex;
@@ -14,7 +13,7 @@
 $font-size,
 $font-weight,
 $line-height,
-$letter-spacing,){
+$letter-spacing){
     font-size:$font-size;
     font-weight:$font-weight;
     line-height:$line-height;
