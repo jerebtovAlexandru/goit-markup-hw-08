@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webstudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="./css/main.min.css" />
     <link
       rel="stylesheet"
@@ -19,9 +22,9 @@
     <header class="page-header">
       <div class="container page-header__container">
         <a href="./index.html" class="logo page-header__logo"
-          ><span class="logo__accent logo__accent--blue">Web</span>Studio</a
+          ><span class="logo--blue">Web</span>Studio</a
         >
-        <button type="button" class="menu-button is-open" data-menu-button>
+        <button type="button" class="menu-button" aria-label="открытие меню" data-menu-button>
           <svg width="25" height="25" class="menu-button__icon">
             <use
               href="./images/sprite-menu.svg#cross-menu"
@@ -33,7 +36,7 @@
             ></use>
           </svg>
         </button>
-        <div class="menu-container is-open" data-menu>
+        <div class="menu-container" data-menu>
           <nav>
             <ul class="list-menu">
               <li class="list-menu__item">
@@ -56,7 +59,8 @@
               <li class="contacts__item">
                 <a
                   href="tel:+380961111111 "
-                  class="contacts__link contacts__link--size">
+                  class="contacts__link contacts__link--size"
+                >
                   <svg class="contacts__svg" width="10" height="16">
                     <use href="./images/symbol-defs.svg#smartphone"></use>
                   </svg>
@@ -165,34 +169,77 @@
           <h2 class="section-work__title">Чем мы занимаемся</h2>
           <ul class="list-work">
             <li class="list-work__item">
-              <img
-                src="./images/img.png"
-                alt="работа с кодом"
-                width="470"
-                class="list-work__img"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images/OurWorks/1200pxWebP/imgFirstWork1200@1x.webp 1x,
+                    ./images/OurWorks/1200pxWebP/imgFirstWork1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/OurWorks/1200pxSquoosh/imgFirstWork1200@1x.jpg 1x,
+                    ./images/OurWorks/1200pxSquoosh/imgFirstWork1200@2x.jpg 2x
+                  "
+                  src="./images/OurWorks/1200pxSquoosh/imgFirstWork1200@1x.jpg"
+                  alt="работа с кодом"
+                  
+                  class="list-work__img"
+                />
+              </picture>
               <div class="work-card">
                 <p class="work-card__subtitle">Десктопные приложения</p>
               </div>
             </li>
             <li class="list-work__item">
-              <img
-                src="./images/image2.jpg"
-                alt="работа на компьютере с моделями телефонов"
-                width="370"
-                class="list-work__img"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./images/OurWorks/1200pxWebP/imgSecondWork1200@1x.webp 1x,
+                    ./images/OurWorks/1200pxWebP/imgSecondWork1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/OurWorks/1200pxSquoosh/imgSecondWork1200@1x.jpg 1x,
+                    ./images/OurWorks/1200pxSquoosh/imgSecondWork1200@2x.jpg 2x
+                  "
+                  src="./images/OurWorks/1200pxSquoosh/imgSecondWork1200@1x.jpg"
+                  alt="работа на компьютере с моделями телефонов"
+                  
+                  class="list-work__img"
+                />
+              </picture>
               <div class="work-card">
                 <p class="work-card__subtitle">мобильные приложения</p>
               </div>
             </li>
             <li class="list-work__item">
-              <img
-                class="list-work__img"
-                src="./images/image3.jpg"
-                alt="работа на планшете с дизайном "
-                width="370"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images/OurWorks/1200pxWebP/imgThirdWork1200@1x.webp 1x,
+                    ./images/OurWorks/1200pxWebP/imgThirdWork1200@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/OurWorks/1200pxSquoosh/imgThirdWork1200@1x.jpg 1x,
+                    ./images/OurWorks/1200pxSquoosh/imgThirdWork1200@2x.jpg 2x
+                  "
+                  class="list-work__img"
+                  src="./images/OurWorks/1200pxSquoosh/imgThirdWork1200@1x.jpg"
+                  alt="работа на планшете с дизайном "
+                  
+                />
+              </picture>
               <div class="work-card">
                 <p class="work-card__subtitle">дизайнерские решения</p>
               </div>
@@ -207,11 +254,66 @@
           <ul class="team-list">
             <li class="team-list__item">
               <div class="team-list__card">
-                <img
-                  class="team-list__img"
-                  src="./images/imgigori1.jpg"
-                  alt="фото сотрудника Игоря"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/480pxWebP/imgIgori480@1x.webp 1x,
+                      ./images/teamS_Persons/480pxWebP/imgIgori480@2x.webp 2x
+                    "
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/1200pxWebP/imgIgori1200@1x.webp 1x,
+                      ./images/teamS_Persons/1200pxWebP/imgIgori1200@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/768pxWebP/imgIgori768@1x.webp 1x,
+                      ./images/teamS_Persons/768pxWebP/imgIgori768@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/480pxSquoosh/imgIgori480@1x.jpg 1x,
+                      ./images/teamS_Persons/480pxSquoosh/imgIgori480@2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgIgori1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgIgori1200@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/768pxSquoosh/imgIgori768@1x.jpg 1x,
+                      ./images/teamS_Persons/768pxSquoosh/imgIgori768@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="team-list__img"
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgIgori1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgIgori1200@2x.jpg 2x
+                    "
+                    src="./images/teamS_Persons/1200pxSquoosh/imgIgori1200@1x.jpg"
+                    alt="фото сотрудника Игоря"
+                  />
+                </picture>
                 <h3 class="team-list__title">Игорь Димьяненко</h3>
                 <p class="team-list__subtitle">Product Designer</p>
                 <ul class="social-list">
@@ -248,11 +350,70 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__card">
-                <img
-                  src="./images/imgoliga2.jpg"
-                  alt="фото сотрудника Ольги"
-                  class="team-list__img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/1200pxWebP/imgOlia1200@1x.webp 1x,
+                      ./images/teamS_Persons/1200pxWebP/imgOlia1200@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/768pxWebP/imgOlia768@1x.webp 1x,
+                      ./images/teamS_Persons/768pxWebP/imgOlia768@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/480pxWebP/imgOlia480@1x.webp 1x,
+                      ./images/teamS_Persons/480pxWebP/imgOlia480@2x.webp 2x
+                    "
+                    media="(max-width:767px)"
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgOlia1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgOlia1200@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/768pxSquoosh/imgOlia768@1x.jpg 1x,
+                      ./images/teamS_Persons/768pxSquoosh/imgOlia768@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/teamS_Persons/480pxSquoosh/imgOlia480@1x.jpg 1x,
+                      ./images/teamS_Persons/480pxSquoosh/imgOlia480@2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgOlia1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgOlia1200@2x.jpg 2x
+                    "
+                    src="./images/teamS_Persons/1200pxSquoosh/imgOlia1200@2x.jpg"
+                    alt="фото сотрудника Ольги"
+                    class="team-list__img"
+                  />
+                </picture>
                 <h3 class="team-list__title">Ольга Репина</h3>
                 <p class="team-list__subtitle">Frontend Developer</p>
                 <ul class="social-list">
@@ -289,11 +450,65 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__card">
-                <img
-                  src="./images/imgnikolai3.jpg"
-                  alt="фото сотрудника Николая"
-                  class="team-list__img"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/teamS_Persons/1200pxWebP/imgKolia1200@1x.webp 1x,
+                      images/teamS_Persons/1200pxWebP/imgKolia1200@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/teamS_Persons/768pxWebP/imgKolia768@1x.webp 1x,
+                      images/teamS_Persons/768pxWebP/imgKolia768@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/teamS_Persons/480pxWebP/imgKolia480@1x.webp 1x,
+                      images/teamS_Persons/480pxWebP/imgKolia480@2x.webp   2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgKolia1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgKolia1200@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/teamS_Persons/768pxSquoosh/imgKolia768@1x.jpg 1x,
+                      ./images/teamS_Persons/768pxSquoosh/imgKolia768@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(max-width:767px)"
+                    srcset="
+                      ./images/teamS_Persons/480pxSquoosh/imgKolia480@1x.jpg 1x,
+                      ./images/teamS_Persons/480pxSquoosh/imgKolia480@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgKolia1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgKolia1200@2x.jpg
+                    "
+                    src="./images/teamS_Persons/1200pxSquoosh/imgKolia1200@1x.jpg"
+                    alt="фото сотрудника Николая"
+                    class="team-list__img"
+                  />
+                </picture>
                 <h3 class="team-list__title">Николай Тарасов</h3>
                 <p class="team-list__subtitle">Marketing</p>
                 <ul class="social-list">
@@ -330,11 +545,66 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__card">
-                <img
-                  src="./images/imgmihail4.jpg"
-                  alt="фото сотрудника Михаила"
-                  class="team-list__img"
-                />
+                <picture>
+                  <source
+                    media="(min-width:1200px )"
+                    srcset="
+                      ./images/teamS_Persons/1200pxWebP/imgMihail1200@1x.webp 1x,
+                      ./images/teamS_Persons/1200pxWebP/imgMihail1200@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px )"
+                    srcset="
+                      ./images/teamS_Persons/768pxWebP/imgMihail768@1x.webp 1x,
+                      ./images/teamS_Persons/768pxWebP/imgMihail768@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767px )"
+                    srcset="
+                      ./images/teamS_Persons/480pxWebP/imgMIhail480@1x.webp 1x,
+                      ./images/teamS_Persons/480pxWebP/imgMihail480@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+
+                  <source
+                    media="(min-width:1200px )"
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgMihail1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgMihail1200@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width:768px )"
+                    srcset="
+                      ./images/teamS_Persons/768pxSquoosh/imgMihail768@1x.jpg 1x,
+                      ./images/teamS_Persons/768pxSquoosh/imgMihail768@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(max-width:767px )"
+                    srcset="
+                      ./images/teamS_Persons/480pxSquoosh/imgMIhail480@1x.jpg 1x,
+                      ./images/teamS_Persons/480pxSquoosh/imgMihail480@2x.jpg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img
+                    srcset="
+                      ./images/teamS_Persons/1200pxSquoosh/imgMihail1200@1x.jpg 1x,
+                      ./images/teamS_Persons/1200pxSquoosh/imgMihail1200@2x.jpg 2x
+                    "
+                    src="./images/teamS_Persons/1200pxSquoosh/imgMihail1200@1x.jpg"
+                    alt="фото сотрудника Михаила"
+                    class="team-list__img"
+                  />
+                </picture>
                 <h3 class="team-list__title">Михаил Ермаков</h3>
                 <p class="team-list__subtitle">UI Designer</p>
                 <ul class="social-list">
@@ -380,7 +650,10 @@
             <li class="company-list__item">
               <a href="" class="company-list__link">
                 <svg width="106" height="60">
-                  <use  href="./images/symbol-defs.svg#company-1"  class="company-list__icon"></use>
+                  <use
+                    href="./images/symbol-defs.svg#company-1"
+                    class="company-list__icon"
+                  ></use>
                 </svg>
               </a>
             </li>
@@ -414,7 +687,8 @@
             </li>
             <li class="company-list__item">
               <a href="" class="company-list__link">
-                <svg class="company-list__icon" width="106" height="60">>
+                <svg class="company-list__icon" width="106" height="60">
+                  >
                   <use href="./images/symbol-defs.svg#company-6"></use>
                 </svg>
               </a>
@@ -568,7 +842,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

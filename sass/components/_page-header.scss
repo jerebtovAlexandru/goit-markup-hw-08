@@ -24,7 +24,7 @@
 }
 
 .list-menu {
-  display: block;
+display: block; 
 
   @include text(40px, 500, 1.17, 0.02em);
 
@@ -86,6 +86,11 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 768px){
+    gap: 10px;
+  }
+    
+
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row-reverse;
@@ -124,6 +129,7 @@
 
   @media screen and (max-width: 767px) {
     display: flex;
+    flex-wrap: wrap;
 
     @include text(24px, 500, 1.14, 0.02em);
 
@@ -137,6 +143,7 @@
 
   @media screen and (min-width: 768px) {
     @include text(12px, 500, 0.85, 0.02em);
+    display:flex;
   }
 
   @media screen and (min-width: 1200px) {
@@ -148,7 +155,7 @@
 .contacts__svg {
   display: none;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     display: block;
 
     margin-right: 10px;
@@ -164,7 +171,7 @@
 
   @media screen and (max-width: 767px) {
     display: flex;
-
+    flex-wrap: wrap;
     margin-top: 60px;
   }
 }

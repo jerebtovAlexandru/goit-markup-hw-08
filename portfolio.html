@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css"/>
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -21,7 +24,7 @@
         <a href="./index.html" class="logo page-header__logo"
           ><span class="logo__accent logo__accent--blue">Web</span>Studio</a
         >
-        <button type="button" class="menu-button is-open" data-menu-button>
+        <button type="button" class="menu-button" data-menu-button>
           <svg width="25" height="25" class="menu-button__icon">
             <use
               href="./images/sprite-menu.svg#cross-menu"
@@ -33,16 +36,16 @@
             ></use>
           </svg>
         </button>
-        <div class="menu-container is-open" data-menu>
+        <div class="menu-container" data-menu>
           <nav>
             <ul class="list-menu">
               <li class="list-menu__item">
-                <a href="./index.html" class="list-menu__link list-menu__link"
-                  >Студия</a
-                >
+                <a href="./index.html" class="list-menu__link">Студия</a>
               </li>
               <li class="list-menu__item">
-                <a href="./portfolio.html" class="list-menu__link list-menu__link--current"
+                <a
+                  href="./portfolio.html"
+                  class="list-menu__link list-menu__link--current"
                   >Портфолио</a
                 >
               </li>
@@ -58,11 +61,17 @@
                   href="tel:+380961111111 "
                   class="contacts__link contacts__link--size"
                 >
+                  <svg class="contacts__svg" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#smartphone"></use>
+                  </svg>
                   +38 096 111 11 11</a
                 >
               </li>
               <li class="contacts__item">
                 <a href="mailto:info@devstudio.com" class="contacts__link">
+                  <svg class="contacts__svg" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#envelope"></use>
+                  </svg>
                   info@devstudio.com</a
                 >
               </li>
@@ -126,12 +135,68 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr1.jpg"
-                    alt="Технокряк"
-                    class="card-list__img"
-                    class="img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem1Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem1Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem1Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem1Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem1Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem1Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem1Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem1Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem1Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem1Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem1Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem1Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem1Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem1Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem1Portfolio1200@1x.jpg 1x"
+                      alt="Технокряк"
+                      class="card-list__img"
+                      class="img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -150,11 +215,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem2Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem2Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem2Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem2Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem2Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem2Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem2Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem2Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem2Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem2Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem2Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem2Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem2Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem2Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem2Portfolio1200@1x.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -175,11 +296,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr3.jpg"
-                    alt="Ресторан Seafood"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem3Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem3Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem3Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem3Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem3Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem3Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem3Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem3Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem3Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem3Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem3Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem3Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem3Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem3Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem3Portfolio1200@1x.jpg 1x"
+                      alt="Ресторан Seafood"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -198,11 +375,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr4.jpg"
-                    alt="Проєкт Prime"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem4Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem4Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem4Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem4Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem4Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem4Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem4Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem4Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem4Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem4Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem4Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem4Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem4Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem4Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem4Portfolio1200@1x.jpg 1x"
+                      alt="Проєкт Prime"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -221,11 +454,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr5.jpg"
-                    alt="Проєкт Boxes"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem5Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem5Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem5Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem5Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem5Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem5Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem5Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem5Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem5Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem5Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem5Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem5Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem5Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem5Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem5Portfolio1200@1x.jpg 1x"
+                      alt="Проєкт Boxes"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -244,11 +533,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr6.jpg"
-                    alt="Inspiration has no Borders"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem6Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem6Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem6Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem6Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem6Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem6Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem6Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem6Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem6Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem6Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem6Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem6Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem6Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem6Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem6Portfolio1200@1x.jpg 1x"
+                      alt="Inspiration has no Borders"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -267,11 +612,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr7.jpg"
-                    alt="Видання Limited Edition"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem7Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem7Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem7Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem7Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem7Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem7Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem7Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem7Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem7Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem7Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem7Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem7Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem7Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem7Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem7Portfolio1200@1x.jpg 1x"
+                      alt="Видання Limited Edition"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -290,11 +691,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr8.jpg"
-                    alt="Проєкт LAB"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem8Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem8Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem8Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem8Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem8Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem8Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem8Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem8Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem8Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem8Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem8Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem8Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem8Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem8Portfolio1200@2x.jpg 2x
+                      "
+                      src="/images/CardPortfolio/1200pxSquoosh/imgItem8Portfolio1200@1x.jpg 1x"
+                      alt="Проєкт LAB"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -313,11 +770,67 @@
             <li class="card-list__item">
               <a href="" class="card-list__link">
                 <div class="card-list__image">
-                  <img
-                    src="./images/ImageFromPortfolio/ImgPr9.jpg"
-                    alt="Growing Business"
-                    class="card-list__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxWebP/imgItem9Portfolio1200@1x.webp 1x,
+                        ./images/CardPortfolio/1200pxWebP/imgItem9Portfolio1200@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxWebP/imgItem9Portfolio768@1x.webp 1x,
+                        ./images/CardPortfolio/768pxWebP/imgItem9Portfolio768@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxWebP/imgItem9Portfolio@1x.webp 1x,
+                        ./images/CardPortfolio/480pxWebP/imgItem9Portfolio@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      media="(min-width:1200px )"
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem9Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem9Portfolio1200@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width:768px)"
+                      srcset="
+                        ./images/CardPortfolio/768pxSquoosh/imgItem9Portfolio768@1x.jpg 1x,
+                        ./images/CardPortfolio/768pxSquoosh/imgItem9Portfolio768@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width:767px )"
+                      srcset="
+                        ./images/CardPortfolio/480pxSquoosh/imgItem9Portfolio@1x.jpg 1x,
+                        ./images/CardPortfolio/480pxSquoosh/imgItem9Portfolio@2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem9Portfolio1200@1x.jpg 1x,
+                        ./images/CardPortfolio/1200pxSquoosh/imgItem9Portfolio1200@2x.jpg 2x
+                      "
+                      src="./images/CardPortfolio/1200pxSquoosh/imgItem9Portfolio1200@1x.jpg 1x"
+                      alt="Growing Business"
+                      class="card-list__img"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
